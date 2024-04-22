@@ -1,0 +1,89 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="文档扫描OCR"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".BinarizationActivity"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:id="@+id/binarizedImageView"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"/>
+        <Button
+            android:id="@+id/ocr"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ocr"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:id="@+id/deal"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <EditText
+                android:id="@+id/text"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="textMultiLine"
+                android:maxLines="6"
+                android:enabled="true"
+                android:background="@drawable/edittext_border"
+                android:padding="8dp"
+                android:layout_marginBottom="15dp"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="insideOverlay"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/copy"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/copy_text"
+                    android:layout_marginEnd="15dp"/>
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

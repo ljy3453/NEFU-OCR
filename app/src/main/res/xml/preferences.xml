@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="enable_optimization"
+        android:title="启用优化功能"
+        android:summary="启用后将开启 OpenCV 的优化功能"
+        android:defaultValue="false" />
+    <SwitchPreference
+        android:key="enable_aliyun"
+        android:title="启用高精度识别"
+        android:summary="启用后将调用云端接口进行高精度识别"
+        android:defaultValue="false" />
+
+    <Preference
+        android:key="pref_key_delete_data"
+        android:title="清除缓存"
+        android:summary="清除应用内部缓存" />
+
+</PreferenceScreen>
